@@ -6,7 +6,7 @@ format: html
 ```{r}
 library(palmerpenguins)
 library(tidyverse)
-
+library(wesanderson)
 
 ```
 ```{r}
@@ -31,8 +31,11 @@ dP_da
 ```
 
 ```{r}
-ggplot(penguins, aes(species, flipper_length_mm)) +
+ggplot(penguins, aes(species, flipper_length_mm, color = species)) +
   geom_jitter() +
-  facet_wrap(~island)
+  scale_color_manual(values = wes_palette("BottleRocket2")) +
+  theme(legend.position = "none") +
+  xlab("Penguin Species") +
+      ylab("FLipper Length (mm)")
 ```
 
