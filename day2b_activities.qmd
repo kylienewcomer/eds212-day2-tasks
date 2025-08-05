@@ -36,6 +36,6 @@ ggplot(penguins, aes(species, flipper_length_mm, color = species)) +
   scale_color_manual(values = wes_palette("BottleRocket2")) +
   theme(legend.position = "none") +
   xlab("Penguin Species") +
-      ylab("FLipper Length (mm)")
+      ylab("Flipper Length (mm)")
 ```
 
