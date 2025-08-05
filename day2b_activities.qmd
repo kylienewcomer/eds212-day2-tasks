@@ -9,4 +9,24 @@ library(tidyverse)
 
 
 ```
+```{r}
+funct <- function(x){
+  x^2
+}
+
+df_dx <- D(expr = expression(x^2), name = "x")
+
+x = 3
+
+df_dx
+
+```
+
+```{r}
+dP_da <- D(expr = expression(2 * (3 * a + 2)^4 - 5), name = "a")
+
+a = 1.5
+
+dP_da
+```
 
